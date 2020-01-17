@@ -51,4 +51,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "devise", "~> 4.7"
 
-gem "rails_admin", "~> 2.0"
+gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
+
+gem "cancancan", "~> 3.0"

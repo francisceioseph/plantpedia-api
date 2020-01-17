@@ -22,9 +22,22 @@
               <td><%= plant.scientific_name %></td>
               <td><%= plant.common_name %></td>
               <td><%= plant.native_status %></td>
-              <td class="text-center"><%= link_to 'Show', plant %></td>
-              <td class="text-center"><%= link_to 'Edit', edit_plant_path(plant) %></td>
-              <td class="text-center"><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <% if can? :read, Plant %>
+                  <td class="text-center">
+                    <%= link_to 'Show', plant %>
+                  </td>
+                <% end %>
+                <% if can? :update, Plant %>
+                  <td class="text-center">
+                    <%= link_to 'Edit', edit_plant_path(plant) %>
+                  </td>
+                <% end %>
+
+                <% if can? :destroy, Plant %>
+                  <td class="text-center">
+                    <%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %>
+                  </td>
+                <% end %>
             </tr>
           <% end %>
         </tbody>
@@ -32,8 +45,11 @@
     </div>
 </div>
 
-<div class="card mt-3">
-  <footer class="card-footer">
-    <%= link_to 'New Plant', new_plant_path %>
+<% if can? :create, User %>
+  <div class="card mt-3">
+    <footer class="card-footer">
+      <%= link_to 'New Plant', new_plant_path %>
+    </div>
   </div>
-</div>
+<% end %>
+
