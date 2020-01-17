@@ -8,6 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("bootstrap")
+global.toastr = require("toastr")
 
 import './src/application.scss'
 
