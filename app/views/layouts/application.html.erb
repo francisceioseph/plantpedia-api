@@ -11,7 +11,18 @@
 
   <body class="container">
     <div class="mt-4 mb-4">
-      <%= yield %>
+      <% if notice %>
+        <p  class="alert alert-primary" role="alert" id="notice"><%= notice %></p>
+      <%end%>
+
+      <% if alert %>
+        <p  class="alert alert-warning" role="alert" id="alert"><%= alert %></p>
+      <%end%>
+
+      <div class="justify-content-center">
+        <%= yield %>
+      </div>
+
     </div>
   </body>
 </html>
