@@ -1,0 +1,43 @@
+<% if notice %>
+  <p  class="alert alert-primary" role="alert" id="notice"><%= notice %></p>
+<%end%>
+
+<div class="card">
+    <div class="card-header">
+      <h1>Plants</h1>
+    </div>
+
+    <div class="card-body">
+      <table class="table table-bordered">
+        <thead>
+          <tr class="text-center">
+            <th scope="col">id</th>
+            <th scope="col">Scientific name</th>
+            <th scope="col">Common name</th>
+            <th scope="col">Native status</th>
+            <th scope="col"colspan="3">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @plants.each do |plant| %>
+            <tr>
+              <td scope="row" class="text-center"><%= plant.id %></td>
+              <td><%= plant.scientific_name %></td>
+              <td><%= plant.common_name %></td>
+              <td><%= plant.native_status %></td>
+              <td class="text-center"><%= link_to 'Show', plant %></td>
+              <td class="text-center"><%= link_to 'Edit', edit_plant_path(plant) %></td>
+              <td class="text-center"><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+</div>
+
+<div class="card mt-3">
+  <footer class="card-footer">
+    <%= link_to 'New Plant', new_plant_path %>
+  </div>
+</div>
