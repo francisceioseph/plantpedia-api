@@ -27,8 +27,12 @@
   </div>
 
   <%= form.fields_for :images do |ff|%>
-    <%= ff.label :url %>
-    <%= ff.text_field :url, class: "form-control"%>
+    <div class="form-group">
+      <%= ff.label :url %>
+        <%= ff.text_field :url, class: "form-control"%>
+        <%= ff.check_box :_destroy %>
+        <%= ff.label :_destroy, "Remove this Image" %>
+    </div>
   <% end %>
 
   <div class="mt-3">
