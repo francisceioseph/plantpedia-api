@@ -55,4 +55,4 @@ gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
 
 gem "cancancan", "~> 3.0"
 
-gem "jquery-rails", "~> 4.3"
+gem 'bootstrap',  '~>4.3.1'

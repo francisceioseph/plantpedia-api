@@ -7,19 +7,21 @@ class PlantsController < ApplicationController
   def index
     @plants = Plant.all
   end
-
+  
   # GET /plants/1
   # GET /plants/1.json
   def show
   end
-
+  
   # GET /plants/new
   def new
     @plant = Plant.new
+    @plant.images.build
   end
 
   # GET /plants/1/edit
   def edit
+    @plant.images.build
   end
 
   # POST /plants
@@ -43,7 +45,7 @@ class PlantsController < ApplicationController
   def update
     respond_to do |format|
       if @plant.update(plant_params)
-        format.html { redirect_to @plant, notice: 'Plant was successfully updated.' }
+        format.html { redirect_to edit_plant_path(@plant), notice: 'Plant was successfully updated.' }
         format.json { render :show, status: :ok, location: @plant }
       else
         format.html { render :edit }
@@ -70,6 +72,6 @@ class PlantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plant_params
-      params.require(:plant).permit(:scientific_name, :common_name, :native_status)
+      params.require(:plant).permit(:scientific_name, :common_name, :native_status, images_attributes: [:id, :url])
     end
 end
