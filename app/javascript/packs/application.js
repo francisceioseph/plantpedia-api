@@ -10,6 +10,7 @@ require("channels")
 
 import "bootstrap";
 import "@fortawesome/fontawesome-free/js/all";
+import "trix";
 
 import "./custom";
 import "./stylesheets/application";
@@ -20,3 +21,6 @@ import "./stylesheets/application";
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+require("trix")
+require("@rails/actiontext")

@@ -5,7 +5,7 @@ class PlantsController < ApplicationController
   # GET /plants
   # GET /plants.json
   def index
-    @plants = Plant.paginate(page: params[:page], per_page: 10)
+    @plants = Plant.paginate(page: params[:page], per_page: 10).order('id ASC')
   end
   
   # GET /plants/1
@@ -72,6 +72,6 @@ class PlantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plant_params
-      params.require(:plant).permit(:id, :scientific_name, :common_name, :native_status, images_attributes: [:id, :url, '_destroy'])
+      params.require(:plant).permit(:id, :description, :scientific_name, :common_name, :native_status, images_attributes: [:id, :url, '_destroy'])
     end
 end
