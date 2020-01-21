@@ -26,12 +26,14 @@
     <%= form.text_field :native_status, class: "form-control" %>
   </div>
 
+  <h2>Imagens (links)</h2>
+
   <%= form.fields_for :images do |ff|%>
     <div class="form-group">
-      <%= ff.label :url %>
-        <%= ff.text_field :url, class: "form-control"%>
-        <%= ff.check_box :_destroy %>
-        <%= ff.label :_destroy, "Remove this Image" %>
+      <%= ff.label 'link' %>
+      <%= ff.text_field :url, class: "form-control"%>
+      <%= ff.check_box :_destroy %>
+      <%= ff.label :_destroy, "Remove this Image" %>
     </div>
   <% end %>
 

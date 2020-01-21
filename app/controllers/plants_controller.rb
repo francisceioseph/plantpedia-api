@@ -5,7 +5,7 @@ class PlantsController < ApplicationController
   # GET /plants
   # GET /plants.json
   def index
-    @plants = Plant.all
+    @plants = Plant.paginate(page: params[:page], per_page: 10)
   end
   
   # GET /plants/1

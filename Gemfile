@@ -56,3 +56,7 @@ gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
 gem "cancancan", "~> 3.0"
 
 gem 'bootstrap',  '~>4.3.1'
+
+gem 'will_paginate', '~> 3.1.0'
+
+gem "will_paginate-bootstrap4", "~> 0.2.2"

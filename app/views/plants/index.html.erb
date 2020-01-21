@@ -48,6 +48,8 @@
           <% end %>
         </tbody>
       </table>
+
+      <%= will_paginate @plants, list_classes: %w(pagination justify-content-center), renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
     </div>
 </div>
 
