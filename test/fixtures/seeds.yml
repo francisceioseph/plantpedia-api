@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vegetative_spread_rate: MyString
+  small_grain: MyString
+  seeds_per_kilo: MyString
+  seedling_vigor: MyString
+  seed_spread_rate: MyString
+  commercial_availability: MyString
+  bloom_period: MyString
+
+two:
+  vegetative_spread_rate: MyString
+  small_grain: MyString
+  seeds_per_kilo: MyString
+  seedling_vigor: MyString
+  seed_spread_rate: MyString
+  commercial_availability: MyString
+  bloom_period: MyString

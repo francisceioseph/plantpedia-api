@@ -1,0 +1,2 @@
+class Propagation < ApplicationRecord
+end

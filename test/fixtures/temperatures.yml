@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  deg_f: 1.5
+  deg_c: 1.5
+
+two:
+  deg_f: 1.5
+  deg_c: 1.5

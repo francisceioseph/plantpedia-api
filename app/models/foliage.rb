@@ -1,0 +1,2 @@
+class Foliage < ApplicationRecord
+end

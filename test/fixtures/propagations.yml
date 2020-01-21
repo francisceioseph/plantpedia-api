@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tubers: MyString
+  sprigs: 
+  sod: MyString
+  seed: MyString
+  cuttings: 
+  corms: MyString
+  container: MyString
+  bulbs: MyString
+  bare_root: MyString
+
+two:
+  tubers: MyString
+  sprigs: 
+  sod: MyString
+  seed: MyString
+  cuttings: 
+  corms: MyString
+  container: MyString
+  bulbs: MyString
+  bare_root: MyString

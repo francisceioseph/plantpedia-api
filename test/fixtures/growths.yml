@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shade_tolerance: MyString
+  salinity_tolerance: MyString
+  ph_minimum: 1.5
+  ph_maximum: 1.5
+  moisture_use: MyString
+
+two:
+  shade_tolerance: MyString
+  salinity_tolerance: MyString
+  ph_minimum: 1.5
+  ph_maximum: 1.5
+  moisture_use: MyString

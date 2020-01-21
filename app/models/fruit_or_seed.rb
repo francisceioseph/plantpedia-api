@@ -1,0 +1,2 @@
+class FruitOrSeed < ApplicationRecord
+end

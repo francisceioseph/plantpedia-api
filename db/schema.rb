@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_21_190512) do
+ActiveRecord::Schema.define(version: 2020_01_21_194054) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,49 @@ ActiveRecord::Schema.define(version: 2020_01_21_190512) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "dimensions", force: :cascade do |t|
+    t.float "ft"
+    t.float "cm"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "flowers", force: :cascade do |t|
+    t.string "conspicuous"
+    t.string "color"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "foliages", force: :cascade do |t|
+    t.string "texture"
+    t.string "porosity_winter"
+    t.string "porosity_summer"
+    t.string "color"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "fruit_or_seeds", force: :cascade do |t|
+    t.string "seed_persistence"
+    t.string "seed_period_begin"
+    t.string "seed_period_end"
+    t.string "seed_abundance"
+    t.string "color"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "growths", force: :cascade do |t|
+    t.string "shade_tolerance"
+    t.string "salinity_tolerance"
+    t.float "ph_minimum"
+    t.float "ph_maximum"
+    t.string "moisture_use"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "images", force: :cascade do |t|
     t.string "url"
     t.datetime "created_at", precision: 6, null: false
@@ -57,6 +100,69 @@ ActiveRecord::Schema.define(version: 2020_01_21_190512) do
     t.string "scientific_name"
     t.string "common_name"
     t.string "native_status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "propagations", force: :cascade do |t|
+    t.string "tubers"
+    t.string "sprigs"
+    t.string "sod"
+    t.string "seed"
+    t.string "cuttings"
+    t.string "corms"
+    t.string "container"
+    t.string "bulbs"
+    t.string "bare_root"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "seeds", force: :cascade do |t|
+    t.string "vegetative_spread_rate"
+    t.string "small_grain"
+    t.string "seeds_per_kilo"
+    t.string "seedling_vigor"
+    t.string "seed_spread_rate"
+    t.string "commercial_availability"
+    t.string "bloom_period"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "species", force: :cascade do |t|
+    t.string "duration"
+    t.string "common_name"
+    t.string "year"
+    t.string "type"
+    t.string "scientific_name"
+    t.string "native_status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "specifications", force: :cascade do |t|
+    t.string "toxicity"
+    t.string "shape_and_orientation"
+    t.string "nitrogen_fixation"
+    t.string "low_growing_grass"
+    t.string "lifespan"
+    t.string "leaf_retention"
+    t.string "growth_rate"
+    t.string "growth_period"
+    t.string "growth_habit"
+    t.string "growth_form"
+    t.string "fire_resistance"
+    t.string "fall_conspicuous"
+    t.string "coppiece_potential"
+    t.string "bloat"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "temperatures", force: :cascade do |t|
+    t.float "deg_f"
+    t.float "deg_c"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

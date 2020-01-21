@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  toxicity: MyString
+  shape_and_orientation: MyString
+  nitrogen_fixation: MyString
+  low_growing_grass: MyString
+  lifespan: MyString
+  leaf_retention: MyString
+  growth_rate: MyString
+  growth_period: MyString
+  growth_habit: MyString
+  growth_form: MyString
+  fire_resistance: MyString
+  fall_conspicuous: MyString
+  coppiece_potential: MyString
+  bloat: MyString
+
+two:
+  toxicity: MyString
+  shape_and_orientation: MyString
+  nitrogen_fixation: MyString
+  low_growing_grass: MyString
+  lifespan: MyString
+  leaf_retention: MyString
+  growth_rate: MyString
+  growth_period: MyString
+  growth_habit: MyString
+  growth_form: MyString
+  fire_resistance: MyString
+  fall_conspicuous: MyString
+  coppiece_potential: MyString
+  bloat: MyString
