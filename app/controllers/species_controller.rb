@@ -17,12 +17,12 @@ class SpeciesController < ApplicationController
     @species = Species.new
     @species.flower = Flower.new
     @species.foliage = Foliage.new
+    @species.propagation = Propagation.new
   end
 
   # GET /species/1/edit
   def edit
-    @species.flower = Flower.new unless @species.flower.present?
-    @species.foliage = Foliage.new unless @species.foliage.present?
+    
   end
 
   # POST /species
@@ -69,6 +69,10 @@ class SpeciesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_species
       @species = Species.find(params[:id])
+      
+      @species.flower = Flower.new unless @species.flower.present?
+      @species.foliage = Foliage.new unless @species.foliage.present?
+      @species.propagation = Propagation.new unless @species.propagation.present?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
@@ -83,6 +87,7 @@ class SpeciesController < ApplicationController
         :native_status,
         flower_attributes: [:id, '_destroy', :conspicuous, :color],
         foliage_attributes: [:id, '_destroy', :texture, :porosity_winter, :porosity_summer, :color],
+        foliage_attributes: [:id, '_destroy', :tubers, :sprigs, :sod, :seed, :cuttings, :corms, :container, :bulbs, :bare_root],
       )
     end
 end

@@ -26,45 +26,132 @@
     <%= form.text_field :native_status, class: "form-control" %>
   </div>
 
-  <fieldset>
-    <legend>Flower</legend>
-    <%= form.fields_for :flower do |ff|%>
-      <div class="form-group">
-        <%= ff.label  :conspicuous %>
-        <%= ff.select :conspicuous , ['conspicuous', 'inconspicuous'], {}, { class: "form-control" }%>
+  
+
+  <div id="accordion">
+    <div class="card mt-4">
+      <div class="card-header">
+        <h5 class="mb-0">
+          <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
+            Flower
+          </button>
+        </h5>
       </div>
 
-      <div class="form-group">  
-        <%= ff.label :color %>
-        <%= ff.text_field :color, class: "form-control"%>
-      </div>
-    <% end %>
-  </fieldset>
+      <div id="collapseOne" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <%= form.fields_for :flower do |ff|%>
+            <div class="form-group">
+              <%= ff.label  :conspicuous %>
+              <%= ff.select :conspicuous , ['conspicuous', 'inconspicuous'], {}, { class: "form-control" }%>
+            </div>
 
-  <fieldset>
-    <legend>Foliage</legend>
-    <%= form.fields_for :foliage do |ff|%>
-      <div class="form-group">  
-        <%= ff.label :texture %>
-        <%= ff.text_field :texture, class: "form-control"%>
+            <div class="form-group">  
+              <%= ff.label :color %>
+              <%= ff.text_field :color, class: "form-control"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-header">
+        <h5 class="mb-0">
+          <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapse-2">
+            Foliage
+          </button>
+        </h5>
       </div>
 
-      <div class="form-group">  
-        <%= ff.label :porosity_winter %>
-        <%= ff.text_field :porosity_winter, class: "form-control"%>
+      <div id="collapse-2" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <%= form.fields_for :foliage do |ff|%>
+            <div class="form-group">  
+              <%= ff.label :texture %>
+              <%= ff.text_field :texture, class: "form-control"%>
+            </div>
+
+            <div class="form-group">  
+              <%= ff.label :porosity_winter %>
+              <%= ff.text_field :porosity_winter, class: "form-control"%>
+            </div>
+
+            <div class="form-group">  
+              <%= ff.label :porosity_summer %>
+              <%= ff.text_field :porosity_summer, class: "form-control"%>
+            </div>
+
+            <div class="form-group">  
+              <%= ff.label :color %>
+              <%= ff.text_field :color, class: "form-control"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-header">
+        <h5 class="mb-0">
+          <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapse-3">
+            Propagation
+          </button>
+        </h5>
       </div>
 
-      <div class="form-group">  
-        <%= ff.label :porosity_summer %>
-        <%= ff.text_field :porosity_summer, class: "form-control"%>
-      </div>
+      <div id="collapse-3" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <%= form.fields_for :propagation do |ff|%>
+            <div class="form-group">  
+              <%= ff.label :tubers %>
+              <%= ff.text_field :tubers, class: "form-control"%>
+            </div>
 
-      <div class="form-group">  
-        <%= ff.label :color %>
-        <%= ff.text_field :color, class: "form-control"%>
+            <div class="form-group">  
+              <%= ff.label :sprigs %>
+              <%= ff.text_field :sprigs, class: "form-control"%>
+            </div>
+
+            <div class="form-group">  
+              <%= ff.label :sod %>
+              <%= ff.text_field :sod, class: "form-control"%>
+            </div>
+
+            <div class="form-group">  
+              <%= ff.label :seed %>
+              <%= ff.text_field :seed, class: "form-control"%>
+            </div>
+
+            <div class="form-group">  
+              <%= ff.label :cuttings %>
+              <%= ff.text_field :cuttings, class: "form-control"%>
+            </div>
+
+            <div class="form-group">  
+              <%= ff.label :corms %>
+              <%= ff.text_field :corms, class: "form-control"%>
+            </div>
+
+            <div class="form-group">  
+              <%= ff.label :container %>
+              <%= ff.text_field :container, class: "form-control"%>
+            </div>
+
+            <div class="form-group">  
+              <%= ff.label :bulbs %>
+              <%= ff.text_field :bulbs, class: "form-control"%>
+            </div>
+            
+            <div class="form-group">  
+              <%= ff.label :bare_root %>
+              <%= ff.text_field :bare_root, class: "form-control"%>
+            </div>
+          <% end %>
+        </div>
       </div>
-    <% end %>
-  </fieldset>
+    </div>
+  </div>
 
   <%= form.submit class: 'btn btn-primary mt-3'%>
 <% end %>

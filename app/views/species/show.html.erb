@@ -63,5 +63,55 @@
   </tbody>
 </table>
 
+<h4 class="mt-4">Propagation</h4>
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Tubers</td>
+      <td scope="col"><%= @species.propagation.tubers %></td>
+    </tr>
+    
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Sprigs</td>
+      <td scope="col"><%= @species.propagation.sprigs %></td>
+    </tr>
+
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Sod</td>
+      <td scope="col"><%= @species.propagation.sod %></td>
+    </tr>
+
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Seed</td>
+      <td scope="col"><%= @species.propagation.seed %></td>
+    </tr>
+
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Cuttings</td>
+      <td scope="col"><%= @species.propagation.cuttings %></td>
+    </tr>
+    
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Corms</td>
+      <td scope="col"><%= @species.propagation.corms %></td>
+    </tr>
+
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Container</td>
+      <td scope="col"><%= @species.propagation.container %></td>
+    </tr>
+
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Bulbs</td>
+      <td scope="col"><%= @species.propagation.bulbs %></td>
+    </tr>
+    
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Bare Root</td>
+      <td scope="col"><%= @species.propagation.bare_root %></td>
+    </tr>
+  </tbody>
+</table>
+
 <%= link_to 'Edit', edit_species_path(@species) %> |
 <%= link_to 'Back', species_index_path %>
