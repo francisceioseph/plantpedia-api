@@ -15,6 +15,7 @@ class SpeciesController < ApplicationController
   # GET /species/new
   def new
     @species = Species.new
+    @species.flower = Flower.new
   end
 
   # GET /species/1/edit
@@ -69,6 +70,15 @@ class SpeciesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def species_params
-      params.require(:species).permit(:id, :duration, :common_name, :year, :type, :scientific_name, :native_status)
+      params.require(:species).permit(
+        :id, 
+        :duration, 
+        :common_name, 
+        :year, 
+        :type, 
+        :scientific_name, 
+        :native_status,
+        flower_attributes: [:id, '_destroy', :conspicuous, :color]
+      )
     end
 end
