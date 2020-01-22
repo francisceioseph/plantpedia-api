@@ -90,7 +90,7 @@ class SpeciesController < ApplicationController
         :description,
         flower_attributes: [:id, '_destroy', :conspicuous, :color],
         foliage_attributes: [:id, '_destroy', :texture, :porosity_winter, :porosity_summer, :color],
-        foliage_attributes: [:id, '_destroy', :tubers, :sprigs, :sod, :seed, :cuttings, :corms, :container, :bulbs, :bare_root],
+        propagation_attributes: [:id, '_destroy', :tubers, :sprigs, :sod, :seed, :cuttings, :corms, :container, :bulbs, :bare_root],
         growth_attributes: [:id, '_destroy', :shade_tolerance, :salinity_tolerance, :ph_minimum, :ph_maximum, :moisture_use],
       )
     end
