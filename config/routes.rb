@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   
   resources :species
   resources :plants
-  root to: "plants#index"
+  root to: "species#index"
 end
