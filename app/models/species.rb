@@ -12,4 +12,6 @@ class Species < ApplicationRecord
     accepts_nested_attributes_for :foliage, allow_destroy: true
     accepts_nested_attributes_for :propagation, allow_destroy: true
     accepts_nested_attributes_for :growth, allow_destroy: true
+
+    validates :scientific_name, presence: true
 end

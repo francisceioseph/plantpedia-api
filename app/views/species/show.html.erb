@@ -1,4 +1,10 @@
-<h4>Species</h4>
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title"><%= @species.scientific_name %></h5>
+    <h6 class="card-subtitle text-muted"><%= @species.common_name %></h6>
+  </div>
+</div>
+
 <table class="table table-bordered">
   <tbody>
     <tr>
@@ -23,124 +29,156 @@
   </tbody>
 </table>
 
-<h4 class="mt-4">Flower</h4>
-<table class="table table-bordered">
-  <tbody>
-    <tr>
-      <td class="font-weight-bold" scope="col">Is Conspicuous</td>
-      <td scope="col"><%= @species.flower.conspicuous %></td>
-    </tr>
-    
-    <tr>
-      <td class="font-weight-bold" scope="col">Color</td>
-      <td scope="col"><%= @species.flower.color %></td>
-    </tr>
-  </tbody>
-</table>
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title">Description</h5>
+    <%= @species.description %>
+  </div>
+</div>
 
-<h4 class="mt-4">Foliage</h4>
-<table class="table table-bordered">
-  <tbody>
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Texture</td>
-      <td scope="col"><%= @species.foliage.texture %></td>
-    </tr>
-    
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Porosity Winter</td>
-      <td scope="col"><%= @species.foliage.porosity_winter %></td>
-    </tr>
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title">Flower</h5>
+  
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <td class="font-weight-bold" scope="col">Is Conspicuous</td>
+          <td scope="col"><%= @species.flower.conspicuous %></td>
+        </tr>
+        
+        <tr>
+          <td class="font-weight-bold" scope="col">Color</td>
+          <td scope="col"><%= @species.flower.color %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Porosity Summer</td>
-      <td scope="col"><%= @species.foliage.porosity_summer %></td>
-    </tr>
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title">Foliage</h5>
 
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Color</td>
-      <td scope="col"><%= @species.foliage.color %></td>
-    </tr>
-  </tbody>
-</table>
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Texture</td>
+          <td scope="col"><%= @species.foliage.texture %></td>
+        </tr>
+        
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Porosity Winter</td>
+          <td scope="col"><%= @species.foliage.porosity_winter %></td>
+        </tr>
 
-<h4 class="mt-4">Propagation</h4>
-<table class="table table-bordered">
-  <tbody>
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Tubers</td>
-      <td scope="col"><%= @species.propagation.tubers %></td>
-    </tr>
-    
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Sprigs</td>
-      <td scope="col"><%= @species.propagation.sprigs %></td>
-    </tr>
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Porosity Summer</td>
+          <td scope="col"><%= @species.foliage.porosity_summer %></td>
+        </tr>
 
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Sod</td>
-      <td scope="col"><%= @species.propagation.sod %></td>
-    </tr>
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Color</td>
+          <td scope="col"><%= @species.foliage.color %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Seed</td>
-      <td scope="col"><%= @species.propagation.seed %></td>
-    </tr>
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title">Propagation</h5>
+  
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Tubers</td>
+          <td scope="col"><%= @species.propagation.tubers %></td>
+        </tr>
+        
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Sprigs</td>
+          <td scope="col"><%= @species.propagation.sprigs %></td>
+        </tr>
 
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Cuttings</td>
-      <td scope="col"><%= @species.propagation.cuttings %></td>
-    </tr>
-    
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Corms</td>
-      <td scope="col"><%= @species.propagation.corms %></td>
-    </tr>
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Sod</td>
+          <td scope="col"><%= @species.propagation.sod %></td>
+        </tr>
 
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Container</td>
-      <td scope="col"><%= @species.propagation.container %></td>
-    </tr>
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Seed</td>
+          <td scope="col"><%= @species.propagation.seed %></td>
+        </tr>
 
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Bulbs</td>
-      <td scope="col"><%= @species.propagation.bulbs %></td>
-    </tr>
-    
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Bare Root</td>
-      <td scope="col"><%= @species.propagation.bare_root %></td>
-    </tr>
-  </tbody>
-</table>
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Cuttings</td>
+          <td scope="col"><%= @species.propagation.cuttings %></td>
+        </tr>
+        
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Corms</td>
+          <td scope="col"><%= @species.propagation.corms %></td>
+        </tr>
 
-<h4 class="mt-4">Growth</h4>
-<table class="table table-bordered">
-  <tbody>
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Shade Tollerance</td>
-      <td scope="col"><%= @species.growth.shade_tolerance %></td>
-    </tr>
-    
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Salinity Tollerance</td>
-      <td scope="col"><%= @species.growth.salinity_tolerance %></td>
-    </tr>
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Container</td>
+          <td scope="col"><%= @species.propagation.container %></td>
+        </tr>
 
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Ph Minimum</td>
-      <td scope="col"><%= @species.growth.ph_minimum %></td>
-    </tr>
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Bulbs</td>
+          <td scope="col"><%= @species.propagation.bulbs %></td>
+        </tr>
+        
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Bare Root</td>
+          <td scope="col"><%= @species.propagation.bare_root %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Ph Maximum</td>
-      <td scope="col"><%= @species.growth.ph_maximum %></td>
-    </tr>
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title">Growth</h5>
+  
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Shade Tollerance</td>
+          <td scope="col"><%= @species.growth.shade_tolerance %></td>
+        </tr>
+        
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Salinity Tollerance</td>
+          <td scope="col"><%= @species.growth.salinity_tolerance %></td>
+        </tr>
 
-    <tr>
-      <td class="font-weight-bold" scope="col-3">Moisture Use</td>
-      <td scope="col"><%= @species.growth.moisture_use %></td>
-    </tr>
-  </tbody>
-</table>
-<%= link_to 'Edit', edit_species_path(@species) %> |
-<%= link_to 'Back', species_index_path %>
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Ph Minimum</td>
+          <td scope="col"><%= @species.growth.ph_minimum %></td>
+        </tr>
+
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Ph Maximum</td>
+          <td scope="col"><%= @species.growth.ph_maximum %></td>
+        </tr>
+
+        <tr>
+          <td class="font-weight-bold" scope="col-3">Moisture Use</td>
+          <td scope="col"><%= @species.growth.moisture_use %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="card mt-3">
+  <footer class="card-footer ">
+    <%= link_to 'Edit', edit_species_path(@species), class: 'btn btn-link'%>
+    <%= link_to 'Back', species_index_path, class: 'btn btn-link'%>
+  </footer>
+</div>

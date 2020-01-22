@@ -1,41 +1,47 @@
-<div class="list-group">
-  <div class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Scientific name</h5>
-    </div>
-    <p class="mb-1">
-      <%= @plant.scientific_name %>
-    </p>
-  </div>
-
-  <div class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Common name</h5>
-    </div>
-    <p class="mb-1">
-      <%= @plant.common_name %>
-    </p>
-  </div>
-  
-  <div class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Native status</h5>
-    </div>
-    <p class="mb-1">
-      <%= @plant.native_status %>
-    </p>
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title"><%= @plant.scientific_name %></h5>
+    <h6 class="card-subtitle text-muted"><%= @plant.common_name %></h6>
   </div>
 </div>
 
-<div class="mt-3">
-  <h4> Description </h4>
-  <%= @plant.description %>
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td class="font-weight-bold" scope="col">id</td>
+      <td scope="col"><%= @plant.id %></td>
+    </tr>
+    
+    <tr>
+      <td class="font-weight-bold" scope="col">Scientific name</td>
+      <td scope="col"><%= @plant.scientific_name %></td>
+    </tr>
+    
+    <tr>
+      <td class="font-weight-bold" scope="col">Common name</td>
+      <td scope="col"><%= @plant.common_name %></td>
+    </tr>
+    
+    <tr>
+      <td class="font-weight-bold" scope="col">Native status</td>
+      <td scope="col"><%= @plant.native_status %></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title">Description</h5>
+    <%= @plant.description %>
+  </div>
 </div>
 
-<div class="mt-3">
-  <h4>Image links</h4>
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title">Images Urls</h5>
+  </div>
 
-  <ul class="list-group">
+  <ul class="list-group list-group-flush">
     <% @plant.images.each do |image| %>
       <li class="list-group-item">
         <%= link_to image.url %>
@@ -44,10 +50,9 @@
   </ul>
 </div>
 
-
 <div class="card mt-3">
-  <footer class="card-footer">
-    <%= link_to 'Edit this Plant', edit_plant_path(@plant), class: 'mr-3' %>
-    <%= link_to 'Show all Plants', plants_path, class: 'mr-3' %>
+  <footer class="card-footer ">
+    <%= link_to 'Edit this Plant', edit_plant_path(@plant), class: 'mr-3 btn btn-link' %>
+    <%= link_to 'Show all Plants', plants_path, class: 'mr-3 btn btn-link' %>
   </div>
 </div>
