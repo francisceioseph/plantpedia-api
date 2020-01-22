@@ -1,4 +1,6 @@
 class Species < ApplicationRecord
+    has_rich_text :description
+    
     has_many :plants
 
     has_one :flower, dependent: :destroy

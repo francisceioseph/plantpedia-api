@@ -1,5 +1,6 @@
 class PlantsController < ApplicationController
   before_action :set_plant, only: [:show, :edit, :update, :destroy]
+  before_action :set_species, only: [:new, :create, :show, :edit, :update]
   load_and_authorize_resource
 
   # GET /plants
@@ -17,6 +18,8 @@ class PlantsController < ApplicationController
   def new
     @plant = Plant.new
     @plant.images.build
+
+    @species = Species.all
   end
 
   # GET /plants/1/edit
@@ -70,8 +73,12 @@ class PlantsController < ApplicationController
       @plant = Plant.find(params[:id])
     end
 
+    def set_species
+      @species = Species.all
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def plant_params
-      params.require(:plant).permit(:id, :description, :scientific_name, :common_name, :native_status, images_attributes: [:id, :url, '_destroy'])
+      params.require(:plant).permit(:id, :description, :scientific_name, :common_name, :native_status, :species_id, images_attributes: [:id, :url, '_destroy'])
     end
 end

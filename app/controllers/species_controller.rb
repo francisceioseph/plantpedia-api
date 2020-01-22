@@ -87,6 +87,7 @@ class SpeciesController < ApplicationController
         :type, 
         :scientific_name, 
         :native_status,
+        :description,
         flower_attributes: [:id, '_destroy', :conspicuous, :color],
         foliage_attributes: [:id, '_destroy', :texture, :porosity_winter, :porosity_summer, :color],
         foliage_attributes: [:id, '_destroy', :tubers, :sprigs, :sod, :seed, :cuttings, :corms, :container, :bulbs, :bare_root],
