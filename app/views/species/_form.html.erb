@@ -151,6 +151,47 @@
         </div>
       </div>
     </div>
+
+        <div class="card mt-4">
+      <div class="card-header">
+        <h5 class="mb-0">
+          <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapse-4">
+            Growth
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapse-4" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <%= form.fields_for :growth do |ff|%>
+            <div class="form-group">  
+              <%= ff.label :shade_tolerance %>
+              <%= ff.text_field :shade_tolerance, class: "form-control"%>
+            </div>
+
+            <div class="form-group">  
+              <%= ff.label :salinity_tolerance %>
+              <%= ff.text_field :salinity_tolerance, class: "form-control"%>
+            </div>
+
+            <div class="form-group">  
+              <%= ff.label :ph_minimum %>
+              <%= ff.text_field :ph_minimum, class: "form-control"%>
+            </div>
+
+            <div class="form-group">  
+              <%= ff.label :ph_maximum %>
+              <%= ff.text_field :ph_maximum, class: "form-control"%>
+            </div>
+
+            <div class="form-group">  
+              <%= ff.label :moisture_use %>
+              <%= ff.text_field :moisture_use, class: "form-control"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 
   <%= form.submit class: 'btn btn-primary mt-3'%>

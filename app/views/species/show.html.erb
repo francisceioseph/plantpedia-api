@@ -113,5 +113,34 @@
   </tbody>
 </table>
 
+<h4 class="mt-4">Growth</h4>
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Shade Tollerance</td>
+      <td scope="col"><%= @species.growth.shade_tolerance %></td>
+    </tr>
+    
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Salinity Tollerance</td>
+      <td scope="col"><%= @species.growth.salinity_tolerance %></td>
+    </tr>
+
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Ph Minimum</td>
+      <td scope="col"><%= @species.growth.ph_minimum %></td>
+    </tr>
+
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Ph Maximum</td>
+      <td scope="col"><%= @species.growth.ph_maximum %></td>
+    </tr>
+
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Moisture Use</td>
+      <td scope="col"><%= @species.growth.moisture_use %></td>
+    </tr>
+  </tbody>
+</table>
 <%= link_to 'Edit', edit_species_path(@species) %> |
 <%= link_to 'Back', species_index_path %>

@@ -18,6 +18,7 @@ class SpeciesController < ApplicationController
     @species.flower = Flower.new
     @species.foliage = Foliage.new
     @species.propagation = Propagation.new
+    @species.growth = Growth.new
   end
 
   # GET /species/1/edit
@@ -73,6 +74,7 @@ class SpeciesController < ApplicationController
       @species.flower = Flower.new unless @species.flower.present?
       @species.foliage = Foliage.new unless @species.foliage.present?
       @species.propagation = Propagation.new unless @species.propagation.present?
+      @species.growth = Growth.new unless @species.growth.present?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
@@ -88,6 +90,7 @@ class SpeciesController < ApplicationController
         flower_attributes: [:id, '_destroy', :conspicuous, :color],
         foliage_attributes: [:id, '_destroy', :texture, :porosity_winter, :porosity_summer, :color],
         foliage_attributes: [:id, '_destroy', :tubers, :sprigs, :sod, :seed, :cuttings, :corms, :container, :bulbs, :bare_root],
+        growth_attributes: [:id, '_destroy', :shade_tolerance, :salinity_tolerance, :ph_minimum, :ph_maximum, :moisture_use],
       )
     end
 end
