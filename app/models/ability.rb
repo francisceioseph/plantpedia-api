@@ -9,6 +9,7 @@ class Ability
       can :manage, :all
       can :access, :rails_admin
       can :manage, Plant
+      can :manage, Species
     end
     
     if user.supervisor_role?
@@ -16,10 +17,15 @@ class Ability
       can :create, Plant
       can :update, Plant
       can :read, Plant
+      
+      can :create, Species
+      can :update, Species
+      can :read, Species
     end
 
     if user.user_role? 
       can :read, Plant
+      can :read, Species
     end
 
     # Define abilities for the passed in user here. For example:

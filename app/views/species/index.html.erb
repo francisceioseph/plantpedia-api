@@ -1,0 +1,63 @@
+<div class="card">
+    <div class="card-header">
+      <h1>Species</h1>
+    </div>
+
+    <div class="card-body">
+      <table class="table table-bordered">
+        <thead>
+          <tr class="text-center">
+            <th scope="col">id</th>
+            <th scope="col">Scientific name</th>
+            <th scope="col">Common name</th>
+            <th scope="col">Native status</th>
+            <th scope="col"colspan="3">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @species.each do |species| %>
+            <tr>
+              <td scope="row" class="text-center"><%= species.id %></td>
+              <td><%= species.scientific_name %></td>
+              <td><%= species.common_name %></td>
+              <td><%= species.native_status %></td>
+                <% if can? :read, Species %>
+                  <td class="text-center">
+                    <%= link_to species do %>
+                      <i class="fas fa-eye"></i>
+                    <% end %>
+                  </td>
+                <% end %>
+                <% if can? :update, Species %>
+                  <td class="text-center">
+                    <%= link_to edit_species_path(species) do %>
+                      <i class="fas fa-pencil-alt"></i>
+                    <% end %>
+                  </td>
+                <% end %>
+
+                <% if can? :destroy, Species %>
+                  <td class="text-center">
+                    <%= link_to species, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                      <i class="fas fa-trash-alt"></i>
+                    <% end %>
+                  </td>
+                <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <%= will_paginate @plants, list_classes: %w(pagination justify-content-center), renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+    </div>
+</div>
+
+<% if can? :create, User %>
+  <div class="card mt-3">
+    <footer class="card-footer">
+      <%= link_to 'New Species', new_species_path %>
+    </div>
+  </div>
+<% end %>
+

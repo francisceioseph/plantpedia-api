@@ -1,0 +1,30 @@
+<%= form_with(model: species, local: true) do |form| %>
+  <% if species.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(species.errors.count, "error") %> prohibited this species from being saved:</h2>
+
+      <ul>
+        <% species.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :scientific_name %>
+    <%= form.text_field :scientific_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :common_name %>
+    <%= form.text_field :common_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :native_status %>
+    <%= form.text_field :native_status, class: "form-control" %>
+  </div>
+
+  <%= form.submit class: 'btn btn-primary'%>
+<% end %>

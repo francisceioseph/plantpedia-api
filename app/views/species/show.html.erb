@@ -1,0 +1,26 @@
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td class="font-weight-bold" scope="col">id</td>
+      <td scope="col"><%= @species.id %></td>
+    </tr>
+    
+    <tr>
+      <td class="font-weight-bold" scope="col">Scientific name</td>
+      <td scope="col"><%= @species.scientific_name %></td>
+    </tr>
+    
+    <tr>
+      <td class="font-weight-bold" scope="col">Common name</td>
+      <td scope="col"><%= @species.common_name %></td>
+    </tr>
+    
+    <tr>
+      <td class="font-weight-bold" scope="col">Native status</td>
+      <td scope="col"><%= @species.native_status %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_species_path(@species) %> |
+<%= link_to 'Back', species_index_path %>
