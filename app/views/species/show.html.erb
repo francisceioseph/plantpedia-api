@@ -23,7 +23,7 @@
   </tbody>
 </table>
 
-<h4>Flower</h4>
+<h4 class="mt-4">Flower</h4>
 <table class="table table-bordered">
   <tbody>
     <tr>
@@ -34,6 +34,31 @@
     <tr>
       <td class="font-weight-bold" scope="col">Color</td>
       <td scope="col"><%= @species.flower.color %></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 class="mt-4">Foliage</h4>
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Texture</td>
+      <td scope="col"><%= @species.foliage.texture %></td>
+    </tr>
+    
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Porosity Winter</td>
+      <td scope="col"><%= @species.foliage.porosity_winter %></td>
+    </tr>
+
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Porosity Summer</td>
+      <td scope="col"><%= @species.foliage.porosity_summer %></td>
+    </tr>
+
+    <tr>
+      <td class="font-weight-bold" scope="col-3">Color</td>
+      <td scope="col"><%= @species.foliage.color %></td>
     </tr>
   </tbody>
 </table>

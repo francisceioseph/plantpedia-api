@@ -16,10 +16,13 @@ class SpeciesController < ApplicationController
   def new
     @species = Species.new
     @species.flower = Flower.new
+    @species.foliage = Foliage.new
   end
 
   # GET /species/1/edit
   def edit
+    @species.flower = Flower.new unless @species.flower.present?
+    @species.foliage = Foliage.new unless @species.foliage.present?
   end
 
   # POST /species
@@ -78,7 +81,8 @@ class SpeciesController < ApplicationController
         :type, 
         :scientific_name, 
         :native_status,
-        flower_attributes: [:id, '_destroy', :conspicuous, :color]
+        flower_attributes: [:id, '_destroy', :conspicuous, :color],
+        foliage_attributes: [:id, '_destroy', :texture, :porosity_winter, :porosity_summer, :color],
       )
     end
 end
