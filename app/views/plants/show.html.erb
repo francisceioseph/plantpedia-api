@@ -13,17 +13,23 @@
     </tr>
     
     <tr>
-      <td class="font-weight-bold" scope="col">Scientific name</td>
+      <td class="font-weight-bold" scope="col">
+        <%= t :scientific_name %>
+      </td>
       <td scope="col"><%= @plant.scientific_name %></td>
     </tr>
     
     <tr>
-      <td class="font-weight-bold" scope="col">Common name</td>
+      <td class="font-weight-bold" scope="col">
+        <%= t :common_name %>
+      </td>
       <td scope="col"><%= @plant.common_name %></td>
     </tr>
     
     <tr>
-      <td class="font-weight-bold" scope="col">Native status</td>
+      <td class="font-weight-bold" scope="col">
+        <%= t :native_status %>
+      </td>
       <td scope="col"><%= @plant.native_status %></td>
     </tr>
   </tbody>
@@ -31,14 +37,18 @@
 
 <div class="card mb-4">
   <div class="card-body">
-    <h5 class="card-title">Description</h5>
+    <h5 class="card-title">
+      <%= t :description %>
+    </h5>
     <%= @plant.description %>
   </div>
 </div>
 
 <div class="card mb-4">
   <div class="card-body">
-    <h5 class="card-title">Images Urls</h5>
+    <h5 class="card-title">
+      <%= t :image_links%>
+    </h5>
   </div>
 
   <ul class="list-group list-group-flush">
@@ -52,7 +62,7 @@
 
 <div class="card mt-3">
   <footer class="card-footer ">
-    <%= link_to 'Edit this Plant', edit_plant_path(@plant), class: 'mr-3 btn btn-link' %>
-    <%= link_to 'Show all Plants', plants_path, class: 'mr-3 btn btn-link' %>
+    <%= link_to t(:edit), edit_plant_path(@plant), class: 'mr-3 btn btn-link' %>
+    <%= link_to t(:back), plants_path, class: 'mr-3 btn btn-link' %>
   </div>
 </div>

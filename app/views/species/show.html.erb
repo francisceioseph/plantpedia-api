@@ -13,17 +13,23 @@
     </tr>
     
     <tr>
-      <td class="font-weight-bold" scope="col">Scientific name</td>
+      <td class="font-weight-bold" scope="col">
+        <%= t :scientific_name %>
+      </td>
       <td scope="col"><%= @species.scientific_name %></td>
     </tr>
     
     <tr>
-      <td class="font-weight-bold" scope="col">Common name</td>
+      <td class="font-weight-bold" scope="col">
+        <%= t :common_name %>
+      </td>
       <td scope="col"><%= @species.common_name %></td>
     </tr>
     
     <tr>
-      <td class="font-weight-bold" scope="col">Native status</td>
+      <td class="font-weight-bold" scope="col">
+        <%= t :native_status%>
+      </td>
       <td scope="col"><%= @species.native_status %></td>
     </tr>
   </tbody>
@@ -31,24 +37,32 @@
 
 <div class="card mb-4">
   <div class="card-body">
-    <h5 class="card-title">Description</h5>
+    <h5 class="card-title">
+        <%= t :description%>
+    </h5>
     <%= @species.description %>
   </div>
 </div>
 
 <div class="card mb-4">
   <div class="card-body">
-    <h5 class="card-title">Flower</h5>
+    <h5 class="card-title">
+        <%= t :flower%>
+    </h5>
   
     <table class="table table-bordered table-responsive-sm table-responsive-md">
       <tbody>
         <tr>
-          <td class="font-weight-bold" scope="col">Is Conspicuous</td>
+          <td class="font-weight-bold" scope="col">
+            <%= t :conspicuous%>
+          </td>
           <td scope="col"><%= @species.flower.conspicuous %></td>
         </tr>
         
         <tr>
-          <td class="font-weight-bold" scope="col">Color</td>
+          <td class="font-weight-bold" scope="col">
+            <%= t :color%>
+          </td>
           <td scope="col"><%= @species.flower.color %></td>
         </tr>
       </tbody>
@@ -58,27 +72,37 @@
 
 <div class="card mb-4">
   <div class="card-body">
-    <h5 class="card-title">Foliage</h5>
+    <h5 class="card-title">
+        <%= t :foliage%>
+    </h5>
 
     <table class="table table-bordered table-responsive-sm table-responsive-md">
       <tbody>
         <tr>
-          <td class="font-weight-bold" scope="col-3">Texture</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :texture%>
+          </td>
           <td scope="col"><%= @species.foliage.texture %></td>
         </tr>
         
         <tr>
-          <td class="font-weight-bold" scope="col-3">Porosity Winter</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :porosity_winter%>
+          </td>
           <td scope="col"><%= @species.foliage.porosity_winter %></td>
         </tr>
 
         <tr>
-          <td class="font-weight-bold" scope="col-3">Porosity Summer</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :porosity_winter%>
+          </td>
           <td scope="col"><%= @species.foliage.porosity_summer %></td>
         </tr>
 
         <tr>
-          <td class="font-weight-bold" scope="col-3">Color</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :color%>
+          </td>
           <td scope="col"><%= @species.foliage.color %></td>
         </tr>
       </tbody>
@@ -88,52 +112,72 @@
 
 <div class="card mb-4">
   <div class="card-body">
-    <h5 class="card-title">Propagation</h5>
+    <h5 class="card-title">
+      <%= t :propagation%>
+    </h5>
   
     <table class="table table-bordered table-responsive-sm table-responsive-md">
       <tbody>
         <tr>
-          <td class="font-weight-bold" scope="col-3">Tubers</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :tubers %>
+          </td>
           <td scope="col"><%= @species.propagation.tubers %></td>
         </tr>
         
         <tr>
-          <td class="font-weight-bold" scope="col-3">Sprigs</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :sprigs %>
+          </td>
           <td scope="col"><%= @species.propagation.sprigs %></td>
         </tr>
 
         <tr>
-          <td class="font-weight-bold" scope="col-3">Sod</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :sod %>
+          </td>
           <td scope="col"><%= @species.propagation.sod %></td>
         </tr>
 
         <tr>
-          <td class="font-weight-bold" scope="col-3">Seed</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :seed %>
+          </td>
           <td scope="col"><%= @species.propagation.seed %></td>
         </tr>
 
         <tr>
-          <td class="font-weight-bold" scope="col-3">Cuttings</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :cuttings %>
+          </td>
           <td scope="col"><%= @species.propagation.cuttings %></td>
         </tr>
         
         <tr>
-          <td class="font-weight-bold" scope="col-3">Corms</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :corms %>
+          </td>
           <td scope="col"><%= @species.propagation.corms %></td>
         </tr>
 
         <tr>
-          <td class="font-weight-bold" scope="col-3">Container</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :container %>
+          </td>
           <td scope="col"><%= @species.propagation.container %></td>
         </tr>
 
         <tr>
-          <td class="font-weight-bold" scope="col-3">Bulbs</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :bulbs %>
+          </td>
           <td scope="col"><%= @species.propagation.bulbs %></td>
         </tr>
         
         <tr>
-          <td class="font-weight-bold" scope="col-3">Bare Root</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :bare_root %>
+          </td>
           <td scope="col"><%= @species.propagation.bare_root %></td>
         </tr>
       </tbody>
@@ -143,32 +187,44 @@
 
 <div class="card mb-4">
   <div class="card-body">
-    <h5 class="card-title">Growth</h5>
+    <h5 class="card-title">
+        <%= t :growth%>
+    </h5>
   
     <table class="table table-bordered table-responsive-sm table-responsive-md">
       <tbody>
         <tr>
-          <td class="font-weight-bold" scope="col-3">Shade Tollerance</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :shade_tollerance %>
+          </td>
           <td scope="col"><%= @species.growth.shade_tolerance %></td>
         </tr>
         
         <tr>
-          <td class="font-weight-bold" scope="col-3">Salinity Tollerance</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :salinity_tollerance %>
+          </td>
           <td scope="col"><%= @species.growth.salinity_tolerance %></td>
         </tr>
 
         <tr>
-          <td class="font-weight-bold" scope="col-3">Ph Minimum</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :ph_minimum %>
+          </td>
           <td scope="col"><%= @species.growth.ph_minimum %></td>
         </tr>
 
         <tr>
-          <td class="font-weight-bold" scope="col-3">Ph Maximum</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :ph_maximum %>
+          </td>
           <td scope="col"><%= @species.growth.ph_maximum %></td>
         </tr>
 
         <tr>
-          <td class="font-weight-bold" scope="col-3">Moisture Use</td>
+          <td class="font-weight-bold" scope="col-3">
+            <%= t :moisture_use %>
+          </td>
           <td scope="col"><%= @species.growth.moisture_use %></td>
         </tr>
       </tbody>
@@ -178,7 +234,7 @@
 
 <div class="card mt-3">
   <footer class="card-footer ">
-    <%= link_to 'Edit', edit_species_path(@species), class: 'btn btn-link'%>
-    <%= link_to 'Back', species_index_path, class: 'btn btn-link'%>
+    <%= link_to t(:edit), edit_species_path(@species), class: 'btn btn-link'%>
+    <%= link_to t(:back), species_index_path, class: 'btn btn-link'%>
   </footer>
 </div>

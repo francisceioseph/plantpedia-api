@@ -12,38 +12,38 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.label :scientific_name %>
+    <%= form.label t(:scientific_name) %>
     <%= form.text_field :scientific_name, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :common_name %>
+    <%= form.label t(:common_name) %>
     <%= form.text_field :common_name, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :native_status %>
+    <%= form.label t(:native_status) %>
     <%= form.text_field :native_status, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :description %>
+    <%= form.label t(:description) %>
     <%= form.rich_text_area :description %>
   </div>
 
   <div class="card mt-4">
     <div class="card-body">
       <div class="card-title">
-        <h5>Imagens (links)</h5>
+        <h5><%= t :image_links%></h5>
       </div>
   
       <%= form.fields_for :images do |ff|%>
         <div class="form-group">
-          <%= ff.label 'link' %>
+          <%= ff.label t(:url) %>
           <%= ff.text_field :url, class: "form-control"%>
           
           <%= ff.check_box :_destroy %>
-          <%= ff.label :_destroy, "Remove this Image" %>
+          <%= ff.label :_destroy, t(:destroy)  %>
         </div>
       <% end %>
     </div>
@@ -54,7 +54,7 @@
       <div class="card-header">
         <h5 class="mb-0">
           <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
-            Flower
+            <%= t :flower%>
           </button>
         </h5>
       </div>
@@ -63,12 +63,12 @@
         <div class="card-body">
           <%= form.fields_for :flower do |ff|%>
             <div class="form-group">
-              <%= ff.label  :conspicuous %>
-              <%= ff.select :conspicuous , ['conspicuous', 'inconspicuous'], {}, { class: "form-control" }%>
+              <%= ff.label  t(:conspicuous) %>
+              <%= ff.select :conspicuous , [[t(:visible), 'conspicuous'], [t(:not_visible), 'inconspicuous']], {}, { class: "form-control" }%>
             </div>
 
             <div class="form-group">  
-              <%= ff.label :color %>
+              <%= ff.label t(:color) %>
               <%= ff.text_field :color, class: "form-control"%>
             </div>
           <% end %>
@@ -80,7 +80,7 @@
       <div class="card-header">
         <h5 class="mb-0">
           <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapse-2">
-            Foliage
+            <%= t(:foliage) %>
           </button>
         </h5>
       </div>
@@ -89,22 +89,22 @@
         <div class="card-body">
           <%= form.fields_for :foliage do |ff|%>
             <div class="form-group">  
-              <%= ff.label :texture %>
+              <%= ff.label t(:texture) %>
               <%= ff.text_field :texture, class: "form-control"%>
             </div>
 
             <div class="form-group">  
-              <%= ff.label :porosity_winter %>
+              <%= ff.label t(:porosity_winter) %>
               <%= ff.text_field :porosity_winter, class: "form-control"%>
             </div>
 
             <div class="form-group">  
-              <%= ff.label :porosity_summer %>
+              <%= ff.label t(:porosity_summer) %>
               <%= ff.text_field :porosity_summer, class: "form-control"%>
             </div>
 
             <div class="form-group">  
-              <%= ff.label :color %>
+              <%= ff.label t(:color) %>
               <%= ff.text_field :color, class: "form-control"%>
             </div>
           <% end %>
@@ -116,7 +116,7 @@
       <div class="card-header">
         <h5 class="mb-0">
           <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapse-3">
-            Propagation
+            <%= t :propagation %>
           </button>
         </h5>
       </div>
@@ -125,47 +125,47 @@
         <div class="card-body">
           <%= form.fields_for :propagation do |ff|%>
             <div class="form-group">  
-              <%= ff.label :tubers %>
+              <%= ff.label t(:tubers) %>
               <%= ff.text_field :tubers, class: "form-control"%>
             </div>
 
             <div class="form-group">  
-              <%= ff.label :sprigs %>
+              <%= ff.label t(:sprigs) %>
               <%= ff.text_field :sprigs, class: "form-control"%>
             </div>
 
             <div class="form-group">  
-              <%= ff.label :sod %>
+              <%= ff.label t(:sod) %>
               <%= ff.text_field :sod, class: "form-control"%>
             </div>
 
             <div class="form-group">  
-              <%= ff.label :seed %>
+              <%= ff.label t(:seed) %>
               <%= ff.text_field :seed, class: "form-control"%>
             </div>
 
             <div class="form-group">  
-              <%= ff.label :cuttings %>
+              <%= ff.label t(:cuttings) %>
               <%= ff.text_field :cuttings, class: "form-control"%>
             </div>
 
             <div class="form-group">  
-              <%= ff.label :corms %>
+              <%= ff.label t(:corms) %>
               <%= ff.text_field :corms, class: "form-control"%>
             </div>
 
             <div class="form-group">  
-              <%= ff.label :container %>
+              <%= ff.label t(:container) %>
               <%= ff.text_field :container, class: "form-control"%>
             </div>
 
             <div class="form-group">  
-              <%= ff.label :bulbs %>
+              <%= ff.label t(:bulbs) %>
               <%= ff.text_field :bulbs, class: "form-control"%>
             </div>
             
             <div class="form-group">  
-              <%= ff.label :bare_root %>
+              <%= ff.label t(:bare_root) %>
               <%= ff.text_field :bare_root, class: "form-control"%>
             </div>
           <% end %>
@@ -177,7 +177,7 @@
       <div class="card-header">
         <h5 class="mb-0">
           <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapse-4">
-            Growth
+            <%= t :growth %>
           </button>
         </h5>
       </div>
@@ -186,27 +186,27 @@
         <div class="card-body">
           <%= form.fields_for :growth do |ff|%>
             <div class="form-group">  
-              <%= ff.label :shade_tolerance %>
+              <%= ff.label t(:shade_tolerance) %>
               <%= ff.text_field :shade_tolerance, class: "form-control"%>
             </div>
 
             <div class="form-group">  
-              <%= ff.label :salinity_tolerance %>
+              <%= ff.label t(:salinity_tolerance) %>
               <%= ff.text_field :salinity_tolerance, class: "form-control"%>
             </div>
 
             <div class="form-group">  
-              <%= ff.label :ph_minimum %>
+              <%= ff.label t(:ph_minimum) %>
               <%= ff.text_field :ph_minimum, class: "form-control"%>
             </div>
 
             <div class="form-group">  
-              <%= ff.label :ph_maximum %>
+              <%= ff.label t(:ph_maximum) %>
               <%= ff.text_field :ph_maximum, class: "form-control"%>
             </div>
 
             <div class="form-group">  
-              <%= ff.label :moisture_use %>
+              <%= ff.label t(:moisture_use) %>
               <%= ff.text_field :moisture_use, class: "form-control"%>
             </div>
           <% end %>
@@ -215,5 +215,5 @@
     </div>
   </div>
 
-  <%= form.submit class: 'btn btn-primary mt-3'%>
+  <%= form.submit t(:save), class: 'btn btn-primary mt-3'%>
 <% end %>

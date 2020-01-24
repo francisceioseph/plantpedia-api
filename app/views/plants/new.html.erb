@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h3>New Plant</h3>
+        <h3><%= t :new_plant %></h3>
     </div>
     <div class="card-body">
         <%= render 'form', plant: @plant%>
@@ -10,7 +10,7 @@
 
 <div class="card mt-3">
     <footer class="card-footer">
-        <%= link_to 'All Plants', plants_path %>
+        <%= link_to t(:back), plants_path %>
     </div>
 </div>
 

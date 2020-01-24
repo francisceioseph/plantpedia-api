@@ -1,33 +1,61 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  scientific_name: 'scientific name'
+  common_name: 'common name'
+  native_status: 'native status'
+  description: 'description'
+  url: 'link'
+  destroy: 'Delete image'
+  flower: 'flower'
+  conspicuous: 'conspicuous'
+  visible: 'visible'
+  not_visible: 'not visible'
+  color: 'color'
+
+  foliage: 'foliage'
+  texture: 'texture'
+  porosity_winter: 'porosity (winter)'
+  porosity_summer: 'porosity (summer)'
+
+  propagation: 'propagation'
+  tubers: 'tubers'
+  sprigs: 'sprigs'
+  sod: 'sod'
+  seed: 'seed'
+  cuttings: 'cuttings'
+  corms: 'corms'
+  container: 'container'
+  bulbs: 'bulbs'
+  bare_root: 'bare_root'
+
+  growth: 'growth'
+  shade_tolerance: 'shade tolerance'
+  salinity_tolerance: 'salinity tolerance'
+  ph_minimum: 'ph minimum'
+  ph_maximum: 'ph maximum'
+  moisture_use: 'moisture use'
+
+  image_links: 'image links'
+  actions: 'actions'
+  new_species: 'New Species'
+  save: 'save'
+  edit: 'edit'
+  back: 'back'
+  show: 'details'
+  confirm_delete: 'Are you sure?'
+  logout: 'logout'
+  plants: 'plants'
+  species: 'species'
+  welcome: 'welcome'
+  new_plant: 'new plant'
+
+  login: 'login'
+  email: 'email'
+  password: 'senha'
+  password_confirmation: 'password confirmation'
+  remember_me: 'remember me'
+  other_actions: 'other actions'
+  forgot_password: 'forgot your password?'
+  no_confirmation_instructions: "didn't receive confirmation instructions?"
+  no_unlock_instructions: "didn't receive unlock instructions?"
+  sign_in_with: 'sign in with'
+  send_reset_instructions: 'Send me reset password instructions'

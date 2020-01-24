@@ -1,6 +1,8 @@
 <div class="card mb-4">
   <div class="card-body">
-    <h5 class="card-title">Species</h5>
+    <h5 class="card-title">
+      <%= t :species %>
+    </h5>
   </div>
 </div>
 
@@ -10,10 +12,10 @@
       <thead>
         <tr class="text-center">
           <th scope="col">id</th>
-          <th scope="col">Scientific name</th>
-          <th scope="col">Common name</th>
-          <th scope="col">Native status</th>
-          <th scope="col"colspan="3">Actions</th>
+          <th scope="col"><%= t :scientific_name %></th>
+          <th scope="col"><%= t :common_name%></th>
+          <th scope="col"><%= t :native_status%></th>
+          <th scope="col"colspan="3"><%= t :actions %></th>
         </tr>
       </thead>
 
@@ -41,7 +43,7 @@
 
               <% if can? :destroy, Species %>
                 <td class="text-center">
-                  <%= link_to species, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <%= link_to species, method: :delete, data: { confirm: t(:confirm_delete) } do %>
                     <i class="fas fa-trash-alt"></i>
                   <% end %>
                 </td>
@@ -58,7 +60,7 @@
 <% if can? :create, User %>
   <div class="card mt-3">
     <footer class="card-footer">
-      <%= link_to 'New Species', new_species_path, class: 'btn btn-link' %>
+      <%= link_to t(:new_species), new_species_path, class: 'btn btn-link' %>
     </div>
   </div>
 <% end %>

@@ -7,17 +7,21 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item <%= 'active' if current_page?(plants_path) %>">
-        <a class="nav-link" href="/plants">Plants</a>
+        <a class="nav-link" href="/plants">
+          <%= t :plants%>
+        </a>
       </li>
       <li class="nav-item <%= 'active' if current_page?(species_index_path) %>">
-        <a class="nav-link" href="/species">Species</a>
+        <a class="nav-link" href="/species">
+          <%= t :species%>
+        </a>
       </li>
     </ul>
 
     <form class="form-inline my-2 my-lg-0">
       <% if current_user.present? %>
-        <span class="navbar-text mr-3">Welcome, <%= current_user.email%></span>
-        <%= link_to "Logout", destroy_user_session_path, method: :delete%>
+        <span class="navbar-text mr-3"><%= t :welcome%>, <%= current_user.email%></span>
+        <%= link_to t(:logout), destroy_user_session_path, method: :delete%>
       <%end%>
     </form>
   </div>
