@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_24_141715) do
+ActiveRecord::Schema.define(version: 2020_01_27_150758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,13 +97,18 @@ ActiveRecord::Schema.define(version: 2020_01_24_141715) do
     t.integer "species_id"
   end
 
-  create_table "images", force: :cascade do |t|
+  create_table "jwt_blacklist", force: :cascade do |t|
+    t.string "jti", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["jti"], name: "index_jwt_blacklist_on_jti"
+  end
+
+  create_table "plant_images", force: :cascade do |t|
     t.string "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "imageable_type"
-    t.bigint "imageable_id"
-    t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
+    t.integer "plant_id"
   end
 
   create_table "plants", force: :cascade do |t|
@@ -151,6 +156,13 @@ ActiveRecord::Schema.define(version: 2020_01_24_141715) do
     t.string "native_status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "species_images", force: :cascade do |t|
+    t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "species_id"
   end
 
   create_table "specifications", force: :cascade do |t|

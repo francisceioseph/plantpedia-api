@@ -17,14 +17,14 @@ class PlantsController < ApplicationController
   # GET /plants/new
   def new
     @plant = Plant.new
-    @plant.images.build
+    @plant.plant_images.build
 
     @species = Species.all
   end
 
   # GET /plants/1/edit
   def edit
-    @plant.images.build
+    @plant.plant_images.build
   end
 
   # POST /plants
@@ -79,6 +79,14 @@ class PlantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plant_params
-      params.require(:plant).permit(:id, :description, :scientific_name, :common_name, :native_status, :species_id, images_attributes: [:id, :url, '_destroy'])
+      params.require(:plant).permit(
+          :id, 
+          :description,
+          :scientific_name,
+          :common_name, 
+          :native_status,
+          :species_id,
+          plant_images_attributes: [:id, :url, '_destroy']
+        )
     end
 end

@@ -19,7 +19,7 @@ class SpeciesController < ApplicationController
     @species.foliage = Foliage.new
     @species.propagation = Propagation.new
     @species.growth = Growth.new
-    @species.images.build
+    @species.species_images.build
   end
 
   # GET /species/1/edit
@@ -76,7 +76,7 @@ class SpeciesController < ApplicationController
       @species.foliage = Foliage.new unless @species.foliage.present?
       @species.propagation = Propagation.new unless @species.propagation.present?
       @species.growth = Growth.new unless @species.growth.present?
-      @species.images.build
+      @species.species_images.build
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
@@ -94,7 +94,7 @@ class SpeciesController < ApplicationController
         foliage_attributes: [:id, '_destroy', :texture, :porosity_winter, :porosity_summer, :color],
         propagation_attributes: [:id, '_destroy', :tubers, :sprigs, :sod, :seed, :cuttings, :corms, :container, :bulbs, :bare_root],
         growth_attributes: [:id, '_destroy', :shade_tolerance, :salinity_tolerance, :ph_minimum, :ph_maximum, :moisture_use],
-        images_attributes: [:id, :url, '_destroy'],
+        species_images_attributes: [:id, :url, '_destroy'],
       )
     end
 end

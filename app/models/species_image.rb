@@ -1,0 +1,2 @@
+class SpeciesImage < ApplicationRecord
+end

@@ -60,3 +60,5 @@ gem 'bootstrap',  '~>4.3.1'
 gem 'will_paginate', '~> 3.1.0'
 
 gem "will_paginate-bootstrap4", "~> 0.2.2"
+
+gem "devise-jwt", "~> 0.6.0"
