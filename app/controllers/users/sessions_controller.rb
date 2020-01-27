@@ -9,9 +9,14 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+  def create
+    super do 
+      respond_to do |format| 
+        format.html { redirect_to(root_path)}
+        format.json { render json: current_user.to_json }
+      end and return;
+    end
+  end
 
   # DELETE /resource/sign_out
   # def destroy

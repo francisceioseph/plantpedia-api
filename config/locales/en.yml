@@ -49,6 +49,7 @@ en:
   new_plant: 'new plant'
 
   login: 'login'
+  sign_up: 'sign up'
   email: 'email'
   password: 'senha'
   password_confirmation: 'password confirmation'

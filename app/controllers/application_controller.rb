@@ -1,5 +1,9 @@
 class ApplicationController < ActionController::Base
-    protect_from_forgery with: :exception
+    protect_from_forgery with: :exception, unless: :json_request?
+    protect_from_forgery with: :null_session, if: :json_request?
+    
+    skip_before_action :verify_authenticity_token, if: :json_request?
+    
     before_action :authenticate_user!
     before_action :set_locale_based_on_browser
  
@@ -15,6 +19,10 @@ class ApplicationController < ActionController::Base
       end
     
       private
+
+      def json_request?
+        request.format.json?
+      end
     
       def locale_valid?(locale)
         I18n.available_locales.map(&:to_s).include?(locale)
