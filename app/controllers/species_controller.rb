@@ -4,7 +4,7 @@ class SpeciesController < ApplicationController
   # GET /species
   # GET /species.json
   def index
-    @species = Species.paginate(page: params[:page], per_page: 10).order('id ASC')
+    @species = Species.paginate(page: params[:page], per_page: 10).order('scientific_name ASC')
   end
 
   # GET /species/1
