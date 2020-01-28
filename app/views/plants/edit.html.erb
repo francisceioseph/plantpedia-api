@@ -1,15 +1,16 @@
-<div class="card">
-    <div class="card-header">
-        <h3>Editing Plant</h3>
-    </div>
-    <div class="card-body">
-        <%= render 'form', plant: @plant %>
-    </div>
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title text-capitalize">
+      <%= t :edit %>
+    </h5>
+  </div>
 </div>
 
-<div class="card mt-3">
-    <footer class="card-footer">
-        <%= link_to t(:show), @plant, class: 'mr-3'%>
-        <%= link_to t(:back), plants_path, class: 'mr-3'%>
-    </div>
+<div class="card mt-3 mb-3">
+  <div class="card-body" style="padding: 0.25rem;">
+    <%= link_to t(:back), plants_path, class: 'btn btn-link'%>
+    <%= link_to t(:show), @plant, class: 'btn btn-link'%>
+  </div>
 </div>
+
+<%= render 'form', plant: @plant %>

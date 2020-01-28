@@ -37,7 +37,7 @@
         <h5><%= t :image_links%></h5>
       </div>
   
-      <%= form.fields_for :images do |ff|%>
+      <%= form.fields_for :species_images do |ff|%>
         <div class="form-group">
           <%= ff.label t(:url) %>
           <%= ff.text_field :url, class: "form-control"%>

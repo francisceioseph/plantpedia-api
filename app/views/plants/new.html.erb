@@ -1,17 +1,17 @@
-<div class="card">
-    <div class="card-header">
-        <h3><%= t :new_plant %></h3>
-    </div>
-    <div class="card-body">
-        <%= render 'form', plant: @plant%>
-    </div>
-
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title text-capitalize">
+      <%= t :new_plant %>
+    </h5>
+  </div>
 </div>
 
-<div class="card mt-3">
-    <footer class="card-footer">
-        <%= link_to t(:back), plants_path %>
-    </div>
+<div class="card mt-3 mb-3">
+  <div class="card-body" style="padding: 0.25rem;">
+    <%= link_to t(:back), plants_path, class: 'btn btn-link' %>
+  </div>
 </div>
+
+<%= render 'form', plant: @plant%>
 
 

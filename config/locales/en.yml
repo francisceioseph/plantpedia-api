@@ -1,7 +1,7 @@
 en:
   scientific_name: 'scientific name'
   common_name: 'common name'
-  native_status: 'native status'
+  native_status: 'conservation status'
   description: 'description'
   url: 'link'
   destroy: 'Delete image'
@@ -36,7 +36,7 @@ en:
 
   image_links: 'image links'
   actions: 'actions'
-  new_species: 'New Species'
+  new_species: 'new species'
   save: 'save'
   edit: 'edit'
   back: 'back'

@@ -6,6 +6,12 @@
   </div>
 </div>
 
+<div class="card mt-3 mb-3">
+  <div class="card-body" style="padding: 0.25rem;">
+    <%= link_to t(:new_plant), new_plant_path, class: 'btn btn-link' %>
+  </div>
+</div>
+
 <div class="card">
     <div class="card-body">
       <table class="table table-bordered table-responsive-sm table-responsive-md">
@@ -63,12 +69,4 @@
       <%= will_paginate @plants, list_classes: %w(pagination justify-content-center), renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
     </div>
 </div>
-
-<% if can? :create, User %>
-  <div class="card mt-3">
-    <footer class="card-footer">
-      <%= link_to t(:new_plant), new_plant_path, class: 'btn btn-link' %>
-    </div>
-  </div>
-<% end %>
 

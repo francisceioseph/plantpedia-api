@@ -1,7 +1,7 @@
 pt: 
   scientific_name: 'nome científico'
   common_name: 'nome popular'
-  native_status: 'status na natureza'
+  native_status: 'estado de conservação'
   description: 'descrição'
   url: 'link'
   destroy: 'Remover imagem'

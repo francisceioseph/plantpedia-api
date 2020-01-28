@@ -24,7 +24,7 @@ class SpeciesController < ApplicationController
 
   # GET /species/1/edit
   def edit
-    
+    @species.species_images.build
   end
 
   # POST /species
@@ -76,7 +76,6 @@ class SpeciesController < ApplicationController
       @species.foliage = Foliage.new unless @species.foliage.present?
       @species.propagation = Propagation.new unless @species.propagation.present?
       @species.growth = Growth.new unless @species.growth.present?
-      @species.species_images.build
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

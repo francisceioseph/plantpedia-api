@@ -1,3 +1,10 @@
+<div class="card mt-3 mb-3">
+  <div class="card-body" style="padding: 0.25rem;">
+    <%= link_to t(:back), plants_path, class: 'btn btn-link' %>
+    <%= link_to t(:edit), edit_plant_path(@plant), class: 'btn btn-link' %>
+  </div>
+</div>
+
 <div class="card mb-4">
   <div class="card-body">
     <h5 class="card-title"><%= @plant.scientific_name %></h5>
@@ -58,11 +65,4 @@
       </li>
     <% end %>
   </ul>
-</div>
-
-<div class="card mt-3">
-  <footer class="card-footer ">
-    <%= link_to t(:edit), edit_plant_path(@plant), class: 'mr-3 btn btn-link' %>
-    <%= link_to t(:back), plants_path, class: 'mr-3 btn btn-link' %>
-  </div>
 </div>

@@ -1,3 +1,10 @@
+<div class="card mt-3 mb-3">
+  <div class="card-body" style="padding: 0.25rem;">
+    <%= link_to t(:back), species_index_path, class: 'btn btn-link'%>
+    <%= link_to t(:edit), edit_species_path(@species), class: 'btn btn-link'%>
+  </div>
+</div>
+
 <div class="card mb-4">
   <div class="card-body">
     <h5 class="card-title"><%= @species.scientific_name %></h5>
@@ -41,6 +48,22 @@
         <%= t :description%>
     </h5>
     <%= @species.description %>
+  </div>
+</div>
+
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title">
+        <%= t :images%>
+    </h5>
+    
+    <ul class="list-group list-group-flush">
+      <% @species.species_images.each do |image| %>
+        <li class="list-group-item">
+          <%= link_to image.url %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </div>
 
@@ -230,11 +253,4 @@
       </tbody>
     </table>
   </div>
-</div>
-
-<div class="card mt-3">
-  <footer class="card-footer ">
-    <%= link_to t(:edit), edit_species_path(@species), class: 'btn btn-link'%>
-    <%= link_to t(:back), species_index_path, class: 'btn btn-link'%>
-  </footer>
 </div>

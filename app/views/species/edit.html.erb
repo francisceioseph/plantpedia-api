@@ -1,10 +1,16 @@
-<h1>Editing Species</h1>
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title text-capitalize">
+      <%= t :edit %>
+    </h5>
+  </div>
+</div>
+
+<div class="card mt-3 mb-3">
+  <div class="card-body" style="padding: 0.25rem;">
+    <%= link_to t(:back), species_index_path, class:'btn btn-link', role: 'button' %>
+    <%= link_to t(:show), @species, class:'btn btn-link', role: 'button' %>
+  </div>
+</div>
 
 <%= render 'form', species: @species %>
-
-<div class="card mt-3">
-  <footer class="card-footer ">
-    <%= link_to t(:show), @species, class:'btn btn-link' %>
-    <%= link_to t(:back), species_index_path, class:'btn btn-link' %>
-  </footer>
-</div>
