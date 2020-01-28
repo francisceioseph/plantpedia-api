@@ -1,2 +1,9 @@
-json.extract! species, :id, :scientific_name, :common_name, :native_status, :species_images, :created_at, :updated_at
-json.url species_url(species, format: :json)
+json.id                 species.id
+json.scientific_name    species.scientific_name
+json.common_name        species.common_name
+json.native_status      species.native_status
+json.description        species.description.body
+json.species_images     species.species_images
+json.created_at         species.created_at
+json.updated_at         species.updated_at
+json.url                species_url(species, format: :json)
