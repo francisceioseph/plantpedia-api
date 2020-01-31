@@ -48,7 +48,7 @@ class SpeciesController < ApplicationController
   def update
     respond_to do |format|
       if @species.update(species_params)
-        format.html { redirect_to @species, notice: 'Species was successfully updated.' }
+        format.html { redirect_to edit_species_path(@species), notice: 'Species was successfully updated.' }
         format.json { render :show, status: :ok, location: @species }
       else
         format.html { render :edit }
