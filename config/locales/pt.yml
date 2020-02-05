@@ -1,4 +1,5 @@
 pt: 
+  name: 'nome'
   scientific_name: 'nome científico'
   common_name: 'nome popular'
   native_status: 'estado de conservação'

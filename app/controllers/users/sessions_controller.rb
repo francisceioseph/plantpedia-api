@@ -12,7 +12,7 @@ class Users::SessionsController < Devise::SessionsController
   def create
     super do 
       respond_to do |format| 
-        format.html { redirect_to(root_path)}
+        format.html { redirect_to(root_path) }
         format.json { render json: current_user.to_json }
       end and return;
     end
@@ -20,10 +20,12 @@ class Users::SessionsController < Devise::SessionsController
 
   # DELETE /resource/sign_out
   def destroy
-    super do |format|
-      format.html {}
-      format.json { head :no_content }
-    end and return;
+    super do 
+      respond_to do |format|
+        format.html { redirect_to(root_path) }
+        format.json { head :no_content }
+      end and return;
+    end
   end
 
   # protected
