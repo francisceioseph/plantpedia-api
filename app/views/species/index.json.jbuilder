@@ -1,1 +1,3 @@
-json.array! @species, partial: "species/species", as: :species
+josn.array! @species do |s|
+    json.(s, :id, :scientific_name, :common_name, :native_status)
+end
